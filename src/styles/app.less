@@ -1,0 +1,30 @@
+.textOneLine{
+    overflow: hidden;
+    width: nowrap;
+    text-overflow: ellipsis;
+}
+
+.border-1px(@a,@b,@c){
+    position: relative;
+    &::after{
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid rgba(@a, @b, @c,0.1);
+        content: '';
+    }
+}
+.clearfix {
+    &::after{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+   
+}
+@backGColor:#eee;
+@headerBgColor:#00bcd4;
